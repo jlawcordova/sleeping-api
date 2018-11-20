@@ -11,7 +11,8 @@
 from flask import Flask, g
 from werkzeug.utils import find_modules, import_string
 
-from .api_v1 import bp
+from .api_v1 import bp as api_v1_bp
+from .api_v2 import bp as api_v2_bp
 from .config import CONFIG
 from .database import db
 from .schema import ma
@@ -36,6 +37,7 @@ def create_app(config_name):
     ma.init_app(app)
 
     # Register the blueprints.
-    app.register_blueprint(bp)
+    app.register_blueprint(api_v1_bp)
+    app.register_blueprint(api_v2_bp)
 
     return app
