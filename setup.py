@@ -35,6 +35,7 @@ setup(
         'Flask-Mongoengine==0.9.5',
         'Marshmallow-Mongoengine==0.9.1',
         'Flask-HTTPAuth==3.2.3',
-        'celery==4.1.0'
+        'celery==4.1.0',
+        'sendgrid'
     ]
 )
