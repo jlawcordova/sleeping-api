@@ -16,6 +16,7 @@ from mongoengine.errors import ValidationError, FieldDoesNotExist, \
     OperationError, NotUniqueError
 from pymongo.errors import ServerSelectionTimeoutError, AutoReconnect
 
+
 class MongoEngine(MongoEngineBase):
     """Extends the MongoEngine extension with custom context managers."""
 
@@ -24,7 +25,7 @@ class MongoEngine(MongoEngineBase):
         exceptions when errors occur.
 
         Example::
-        
+
             with db.QueryContext():
                 Foo(**foo).save()
         """
@@ -35,7 +36,7 @@ class MongoEngine(MongoEngineBase):
         def __exit__(self, type, value, traceback):
             """Raises the proper exceptions when exiting the context manager
             with errors.
-            
+
             :raises Conflict: occurs when a duplicate data is being inserted in
                               a unique field.
             :raises UnprocessableEntity: occurs when query data is invalid.
@@ -47,9 +48,9 @@ class MongoEngine(MongoEngineBase):
             if isinstance(value, ValidationError):
                 errors = {}
                 if value.errors is not None:
-                    errors = { 
-                        key: [value.errors[key].message] \
-                            for key in value.errors.keys()
+                    errors = {
+                        key: [value.errors[key].message]
+                        for key in value.errors.keys()
                     }
                 else:
                     errors = {
@@ -105,4 +106,4 @@ class MongoEngine(MongoEngineBase):
                 raise ServiceUnavailable(errors)
 
 
-db = MongoEngine() # pylint: disable=C0103
+db = MongoEngine()  # pylint: disable=C0103

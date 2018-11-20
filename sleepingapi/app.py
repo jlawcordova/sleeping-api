@@ -19,6 +19,7 @@ from .schema import ma
 APP_ENVVAR_SETTINGS = 'SLEEPING_API_SETTINGS'
 APP_PYFILE_SETTINGS = 'application.cfg'
 
+
 def create_app(config_name):
     """Creates the application instance."""
     app = Flask(__name__, instance_relative_config=True)

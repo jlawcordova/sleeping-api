@@ -18,4 +18,4 @@ from .task import celery
 
 APP_CONFIG = 'SLEEPING_API_CONFIG'
 
-app = create_app(os.getenv(APP_CONFIG) or 'default') # pylint: disable=C0103
+app = create_app(os.getenv(APP_CONFIG) or 'default')  # pylint: disable=C0103

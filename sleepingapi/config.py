@@ -9,6 +9,8 @@
     :license: MIT, see LICENSE for more details.
 """
 # pylint: disable=r0903
+
+
 class Config(object):
     """The base configuration class."""
     DEBUG = False

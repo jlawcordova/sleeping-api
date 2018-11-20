@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-    User Controller
+    User Data
     ~~~~~~~~~~~~~~~~
 
-    Contains controllers for user related models.
-
-    :copyright: (c) 2018 by Junel Lawrence Cordova.
-    :license: MIT, see LICENSE for more details.
+    Contains the data layer for user.
 """
 # pylint: disable=E1101
 from sleepingapi.database import db
@@ -15,7 +12,7 @@ from .model import User
 from .schema import UserSchema
 
 
-class UserController(object):
+class UserData(object):
     """Serves as a controller for user."""
 
     def get(self, id):

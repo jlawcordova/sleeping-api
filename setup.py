@@ -15,10 +15,10 @@ from setuptools import setup, find_packages
 setup(
     name='SleepingAPI',
     version='1.0.0',
-    description='Sleeping API is a base project for creating RESTful API ' \
-        'applications with Flask.',
-    long_description='Sleeping API is a base project for creating RESTful ' \
-        'API with Flask.',
+    description='Sleeping API is a base project for creating RESTful API '
+    'applications with Flask.',
+    long_description='Sleeping API is a base project for creating RESTful '
+    'API with Flask.',
     url='sleepingapi.com',
     author='Junel Lawrence Cordova',
     author_email='jlaw.cordova@gmail.com',
