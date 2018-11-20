@@ -29,7 +29,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'Flask==0.12.2',
+        'flask>=0.12.3',
         'Flask-RESTful==0.3.6',
         'Flask-Marshmallow==0.8.0',
         'Flask-Mongoengine==0.9.5',
